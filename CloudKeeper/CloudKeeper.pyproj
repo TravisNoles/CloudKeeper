@@ -2,7 +2,7 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <Name>CloudKeeperCommunity</Name>
+    <Name>CloudKeeper</Name>
     <RootNamespace>CloudKeeper</RootNamespace>
     <InterpreterId>{8ffdc3e4-49a1-48fa-8b11-c32cb5b9aacf}</InterpreterId>
     <InterpreterVersion>3.4</InterpreterVersion>
@@ -44,6 +44,10 @@
     <Compile Include="CloudKeeper\settings.py" />
     <Compile Include="CloudKeeper\urls.py" />
     <Compile Include="CloudKeeper\wsgi.py" />
+    <Compile Include="SSH\models.py" />
+    <Compile Include="SSH\tests.py" />
+    <Compile Include="SSH\views.py" />
+    <Compile Include="SSH\__init__.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
@@ -56,11 +60,17 @@
     <Folder Include="app\templates\app\" />
     <Folder Include="CloudKeeper\" />
     <Folder Include="DigitalOcean\" />
+    <Folder Include="DigitalOcean\Static\" />
     <Folder Include="DigitalOcean\templates\" />
+    <Folder Include="SSH\" />
+    <Folder Include="SSH\templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="DigitalOcean\Static\dashboard.css" />
+    <Content Include="DigitalOcean\templates\DashBoard.html" />
     <Content Include="DigitalOcean\templates\index.html" />
+    <Content Include="readme.md" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
@@ -91,11 +101,7 @@
     <Content Include="app\templates\app\layout.html" />
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="readme.mht">
-      <SubType>WebBrowser</SubType>
-    </None>
+    <Content Include="SSH\templates\index.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">

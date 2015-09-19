@@ -68,7 +68,7 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="DigitalOcean\Static\dashboard.css" />
-    <Content Include="DigitalOcean\templates\DashBoard.html" />
+    <Content Include="app\templates\app\DashBoard.html" />
     <Content Include="DigitalOcean\templates\index.html" />
     <Content Include="readme.md" />
     <Content Include="requirements.txt" />
